@@ -7,7 +7,7 @@ public class Slider_Variable_1 : MonoBehaviour
 {
     public Slider variable1_slider;
     public Image fill;
-    private float counter = 0;
+    private float counter = 100;
     private void Awake()
     {
         variable1_slider = gameObject.GetComponent<Slider>();
@@ -26,27 +26,32 @@ public class Slider_Variable_1 : MonoBehaviour
     {
         if (variable1_slider.value <= 30)
         {
-            counter++;
+            //counter++;
             fill.color = Color.red;
         }
         else
             if (variable1_slider.value >= 31 && variable1_slider.value <= 70)
         {
-            counter++;
+            //counter++;
             fill.color = Color.blue;
         }
         else
         if (variable1_slider.value >= 71 && variable1_slider.value <= 100)
         {
-            counter++;
+            //counter++;
             fill.color = Color.green;
         }
 
-        if (counter == 100)
-        {
-            counter = 0;
-        }
-
         variable1_slider.value = counter;
+    }
+
+    public void incrementCounter()
+    {
+        counter++;
+    }
+
+    public void decrementCounter()
+    {
+        counter--;
     }
 }
