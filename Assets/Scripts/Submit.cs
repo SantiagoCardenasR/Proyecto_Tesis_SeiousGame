@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GoogleSheetsToUnity;
 public class Submit : MonoBehaviour
 {
-    public InputField name;
+    public InputField _name;
     public InputField lastName;
     public InputField mail;
     public InputField enterprise;
@@ -13,32 +14,39 @@ public class Submit : MonoBehaviour
     private string lastName_field;
     private string mail_field;
     private string enterprise_field;
+    private List<string> list = new List<string>();
+    private string associatedSheet = "1GrsTxAEOe1NIzwune7jvqwHKf6SpIp4ZrB5vsVqxwSs";
+    private string associatedWorkSheet = "Data";
 
-    [SerializeField]
-    private string base_url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScAKF4_F5JJYYKBTGAuRL5LnVCDvk8xotNbgdgedH0sSgVRcA/formResponse";
-
-    IEnumerator Post(string name, string lastName, string mail, string enterprise)
+    void Start()
     {
-        WWWForm form = new WWWForm();
-        form.AddField("entry.66907701", name);
-        form.AddField("entry.1735751982", lastName);
-        form.AddField("entry.1124099430", mail);
-        form.AddField("entry.1645218451", enterprise);
-
-        byte[] rawData = form.data;
-
-        WWW www = new WWW(base_url, rawData);
-        yield return www;
+        //_name = gameObject.GetComponent<InputField>();
+        //lastName = gameObject.GetComponent<InputField>();
+        //mail = gameObject.GetComponent<InputField>();
+        //enterprise = gameObject.GetComponent<InputField>();
+        name_field = "";
+        lastName_field = "";
+        mail_field = "";
+        enterprise_field = "";
     }
 
     public void submit_information()
     {
-        string name_field = name.text;
-        string lastName_field = lastName.text;
-        string mail_field = mail.text;
-        string enterprise_field = enterprise.text;
-
-        StartCoroutine(Post(name_field, lastName_field, mail_field, enterprise_field));
+        string time = System.DateTime.Now.ToString("h:mm:ss");
+        list.Add(time);
+        name_field = _name.text;
+        print(name_field);
+        lastName_field = lastName.text;
+        print(lastName_field);
+        mail_field = mail.text;
+        print(mail_field);
+        enterprise_field = enterprise.text;
+        print(enterprise_field);
+        list.Add(name_field);
+        list.Add(lastName_field);
+        list.Add(mail_field);
+        list.Add(enterprise_field);
+        SpreadsheetManager.Append(new GSTU_Search(associatedSheet, associatedWorkSheet), new ValueRange(list), null);
     }
 
 }

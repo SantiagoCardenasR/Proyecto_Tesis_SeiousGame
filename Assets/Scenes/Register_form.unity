@@ -1145,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -510.5, y: -193.20001}
-  m_SizeDelta: {x: 239, y: 231.6}
+  m_AnchoredPosition: {x: -537.85, y: 218.29997}
+  m_SizeDelta: {x: 184.3, y: 181.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511279505
 MonoBehaviour:
@@ -1462,12 +1462,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 6837e69bd532be6439776100e9b1c5e2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1717,11 +1717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b520969abd98b23448023be735988584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 484732672}
+  _name: {fileID: 484732672}
   lastName: {fileID: 327834871}
   mail: {fileID: 2092564185}
   enterprise: {fileID: 1504051610}
-  base_url: https://docs.google.com/forms/d/e/1FAIpQLScAKF4_F5JJYYKBTGAuRL5LnVCDvk8xotNbgdgedH0sSgVRcA/viewform?usp=embed_facebook
 --- !u!4 &1244170201
 Transform:
   m_ObjectHideFlags: 0
@@ -2117,13 +2116,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Welcome to Software Dev Simulator
+  m_Text: 'Welcome to Software Dev Simulator!
 
 
     Initiative created by Ricardo David Camargo Lemos'
   currentTraduction:
     language: 10
-    text: 'Welcome to Software Dev Simulator
+    text: 'Welcome to Software Dev Simulator!
 
 
       Initiative created by Ricardo David Camargo Lemos'
