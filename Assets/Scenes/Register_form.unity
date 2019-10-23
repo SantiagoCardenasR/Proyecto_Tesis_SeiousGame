@@ -1640,7 +1640,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1208798122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1244170200}
+        m_MethodName: submit_information
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1208798122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,6 +1688,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208798119}
   m_CullTransparentMesh: 0
+--- !u!1 &1244170199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244170201}
+  - component: {fileID: 1244170200}
+  m_Layer: 0
+  m_Name: Submit_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1244170200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244170199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b520969abd98b23448023be735988584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: {fileID: 484732672}
+  lastName: {fileID: 327834871}
+  mail: {fileID: 2092564185}
+  enterprise: {fileID: 1504051610}
+  base_url: https://docs.google.com/forms/d/e/1FAIpQLScAKF4_F5JJYYKBTGAuRL5LnVCDvk8xotNbgdgedH0sSgVRcA/viewform?usp=embed_facebook
+--- !u!4 &1244170201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244170199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 634.6848, y: 312.02966, z: -51.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1269471462
 GameObject:
   m_ObjectHideFlags: 0

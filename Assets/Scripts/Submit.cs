@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Google;
-
 public class Submit : MonoBehaviour
 {
     public InputField name;
