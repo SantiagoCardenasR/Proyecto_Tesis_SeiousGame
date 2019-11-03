@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using GoogleSheetsToUnity;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 public class Submit : MonoBehaviour
 {
     public InputField _name;
@@ -18,6 +19,7 @@ public class Submit : MonoBehaviour
     private List<string> list = new List<string>();
     private string associatedSheet = "1GrsTxAEOe1NIzwune7jvqwHKf6SpIp4ZrB5vsVqxwSs";
     private string associatedWorkSheet = "Data";
+    private int k;
 
 
     
@@ -32,6 +34,7 @@ public class Submit : MonoBehaviour
         lastName_field = "";
         mail_field = "";
         enterprise_field = "";
+        k = 3;
     }
 
     void Update()
@@ -101,7 +104,10 @@ public class Submit : MonoBehaviour
         list.Add(lastName_field);
         list.Add(mail_field);
         list.Add(enterprise_field);
-        SpreadsheetManager.Append(new GSTU_Search(associatedSheet, associatedWorkSheet), new ValueRange(list), null);
+        SpreadsheetManager.Write(new GSTU_Search(associatedSheet, associatedWorkSheet, "A"+k), new ValueRange(list), null);
+        k++;
+        list.Clear();
+        SceneManager.LoadScene(1);
     }
 
 }
