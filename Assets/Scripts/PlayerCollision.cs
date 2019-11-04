@@ -4,5 +4,17 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public Camera mainCamera;
+    public void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) == true)
+        {
+
+        }
+    }
 }
